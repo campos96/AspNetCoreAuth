@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="text-center m-5 p-5">
+            <h1>Welcome @User.Identity.Name</h1>
+            <hr />
+            @foreach (var claim in User.Claims)
+            {
+                <h3>@claim.Value</h3>
+            }
+        </div>
+    </div>
+</div>
